@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import Menu from "./Menu.js"
 import './App.css';
 
 function App() {
+  const data = {
+    "breakfast": [
+      {"food": "pancakes", "price": 5.00, "vegetarian": true},
+      {"food": "waffles", "price": 5.00, "vegetarian": true},
+      {"food": "orange juice", "price": 2.00, "vegetarian": true}
+    ],
+    "lunch": [
+      {"food": "turkey sandwich", "price": 8.00, "vegetarian": false},
+      {"food": "grilled cheese", "price": 6.00, "vegetarian": true},
+      {"food": "hamburger", "price": 8.00, "vegetarian": false}
+    ],
+    "dinner": [
+      {"food": "chicken alfredo", "price": 10.00, "vegetarian": false},
+      {"food": "tofu stir-fry", "price": 9.00, "vegetarian": true},
+      {"food": "chili", "price": 8.00, "vegetarian": false}
+    ]
+  }
+  console.log("App.js", data)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu menu={data} />
     </div>
   );
 }
