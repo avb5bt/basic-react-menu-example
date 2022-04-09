@@ -2,6 +2,8 @@ import Menu from "./Menu.js"
 import './App.css';
 
 function App() {
+  // hard-coded data
+  // is a JS object (like a HashMap or Dictionary in other languages)
   const data = {
     "breakfast": [
       {"food": "pancakes", "price": 5.00, "vegetarian": true},
@@ -19,7 +21,7 @@ function App() {
       {"food": "chili", "price": 8.00, "vegetarian": false}
     ]
   }
-  console.log("App.js", data)
+  // What HTML shoudl be displayed? A div containing the Menu component
   return (
     <div className="App">
       <Menu menu={data} />
