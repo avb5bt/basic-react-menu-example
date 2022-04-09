@@ -6,6 +6,7 @@ function Meal(props) {
   }
   console.log(itemsToDisplay)
   return (<>
+    <h2>{props.name}</h2>
     {itemsToDisplay.map((item) => <Item info={item} />)}
     </>);
 }

@@ -7,12 +7,7 @@ function Menu(props) {
       <h1>Menu</h1>
       {showOnlyVegetarian && <button onClick={() => setShowOnlyVegetarian(false)} > Show All </button>}
       {!showOnlyVegetarian && <button onClick={() => setShowOnlyVegetarian(true)} > Show Only Vegetarian </button>}
-      <h2>Breakfast</h2>
-      <Meal items={props.menu.breakfast} onlyVegetarian={showOnlyVegetarian} />
-      <h2>Lunch</h2>
-      <Meal items={props.menu.lunch} onlyVegetarian={showOnlyVegetarian} />
-      <h2>Dinner</h2>
-      <Meal items={props.menu.dinner} onlyVegetarian={showOnlyVegetarian} />
+      {Object.keys(props.menu).map((mealName) => <Meal name={mealName} items={props.menu[mealName]} onlyVegetarian={showOnlyVegetarian} />)}
     </>);
 }
 
