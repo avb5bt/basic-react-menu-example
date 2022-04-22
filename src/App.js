@@ -30,3 +30,6 @@ function App() {
 }
 
 export default App;
+/*********************LEVEL 4: App***********************
+this is where the data comes from. The data is an OBJECT of array items where wach item is another object.
+*********************/
