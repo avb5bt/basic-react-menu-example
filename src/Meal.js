@@ -36,4 +36,6 @@ disPlayArray.map((element)=><Child attribute={element}>)
 3) filter() is very similar to map()  (and for each loops) except you use it to remove stuff. map() is a simple traversal
 
 4) notice that we don't change the props directly. We make copies of it
+
+5) if you want somethign to shop showing up, use filter()
 */
